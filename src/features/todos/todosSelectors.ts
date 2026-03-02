@@ -1,4 +1,4 @@
-import { RootState } from '../../app/store'
+import type { RootState } from '../../app/store'
 import { createSelector } from '@reduxjs/toolkit'
 
 /* BASIC SELECTORS */

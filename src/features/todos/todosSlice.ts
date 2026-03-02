@@ -1,10 +1,11 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import type { PayloadAction } from '@reduxjs/toolkit'
 import {
   fetchTodosAPI,
   fetchTodoByIdAPI,
   fetchUsersAPI,
 } from './todosAPI'
-import { TodosState, StatusFilter } from './todosTypes'
+import type { TodosState, StatusFilter } from './todosTypes'
 
 /*  THUNKS  */
 
