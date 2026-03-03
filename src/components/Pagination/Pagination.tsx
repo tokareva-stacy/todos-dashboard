@@ -31,7 +31,7 @@ const Pagination = () => {
         disabled={page === 1}
         className={styles.button}
       >
-        Prev
+        ←
       </button>
 
       {pages.map((p) => (
@@ -49,7 +49,7 @@ const Pagination = () => {
         disabled={page === totalPages}
         className={styles.button}
       >
-        Next
+        →
       </button>
     </div>
   );

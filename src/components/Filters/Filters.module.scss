@@ -1,0 +1,29 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input,
+.select {
+  padding: 8px;
+  border-radius: v.$radius-md;
+  border: 1px solid #ddd;
+}
+
+.reset {
+  padding: 8px 12px;
+  border: none;
+  border-radius: v.$radius-md;
+  background: v.$reset;
+  color: v.$white;
+  transition: v.$transition;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

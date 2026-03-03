@@ -1,0 +1,29 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.wrapper {
+  display: flex;
+  gap: v.$spacing-sm;
+  margin-top: v.$spacing-lg;
+}
+
+.button {
+  @include m.button-base;
+  background: v.$white;
+  border: 1px solid v.$border;
+
+  &:hover:not(:disabled) {
+    background: v.$primary;
+    color: v.$white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.active {
+  background: v.$primary;
+  color: v.$white;
+}
