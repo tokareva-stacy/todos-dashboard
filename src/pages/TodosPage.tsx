@@ -11,6 +11,8 @@ import {
 } from "../features/todos/todosSelectors";
 
 import TodoTable from "../components/TodoTable/TodoTable";
+import Filters from "../components/Filters/Filters";
+import Pagination from "../components/Pagination/Pagination";
 
 const TodosPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -33,15 +35,14 @@ const TodosPage = () => {
     <div style={{ padding: 20 }}>
       <h1>Todos</h1>
 
+      <Filters />
+
       {todos.length === 0 ? (
         <p>No todos found</p>
       ) : (
         <>
           <TodoTable todos={todos} />
-
-          <p>
-            Page {filters.page} of {totalPages}
-          </p>
+          <Pagination />
         </>
       )}
     </div>
