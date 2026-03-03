@@ -1,0 +1,9 @@
+@use './reset';
+@use './variables' as v;
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  background: v.$bg;
+}

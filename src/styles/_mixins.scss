@@ -1,0 +1,16 @@
+@use './variables' as *;
+
+@mixin card {
+  background: $color-white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  padding: $spacing-md;
+}
+
+@mixin button-base {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-sm;
+  border: none;
+  cursor: pointer;
+  transition: $transition-default;
+}
