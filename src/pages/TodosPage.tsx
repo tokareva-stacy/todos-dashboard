@@ -10,6 +10,8 @@ import {
   selectFilters,
 } from "../features/todos/todosSelectors";
 
+import TodoTable from "../components/TodoTable/TodoTable";
+
 const TodosPage = () => {
   const dispatch = useDispatch<AppDispatch>();
 
@@ -35,13 +37,7 @@ const TodosPage = () => {
         <p>No todos found</p>
       ) : (
         <>
-          <ul>
-            {todos.map((todo) => (
-              <li key={todo.id}>
-                {todo.title} — {todo.completed ? "✅" : "❌"}
-              </li>
-            ))}
-          </ul>
+          <TodoTable todos={todos} />
 
           <p>
             Page {filters.page} of {totalPages}
