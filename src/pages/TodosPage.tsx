@@ -4,31 +4,25 @@ import type { AppDispatch } from "../app/store";
 import { fetchTodos, fetchUsers } from "../features/todos/todosSlice";
 import {
   selectPaginatedTodos,
-  selectLoading,
   selectError,
-  selectTotalPages,
-  selectFilters,
 } from "../features/todos/todosSelectors";
 
 import TodoTable from "../components/TodoTable/TodoTable";
 import Filters from "../components/Filters/Filters";
 import Pagination from "../components/Pagination/Pagination";
+import EmptyState from "../components/EmptyState/EmptyState";
 
 const TodosPage = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const todos = useSelector(selectPaginatedTodos);
-  const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
-  const totalPages = useSelector(selectTotalPages);
-  const filters = useSelector(selectFilters);
 
   useEffect(() => {
     dispatch(fetchTodos());
     dispatch(fetchUsers());
   }, [dispatch]);
 
-  if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   return (
@@ -38,7 +32,7 @@ const TodosPage = () => {
       <Filters />
 
       {todos.length === 0 ? (
-        <p>No todos found</p>
+        <EmptyState message="No todos found" />
       ) : (
         <>
           <TodoTable todos={todos} />

@@ -6,7 +6,6 @@ import { fetchTodoById } from "../features/todos/todosSlice";
 import {
   selectSelectedTodo,
   selectUsers,
-  selectLoading,
 } from "../features/todos/todosSelectors";
 import styles from "./TodoDetailsPage.module.scss";
 
@@ -17,15 +16,12 @@ const TodoDetailsPage = () => {
 
   const todo = useSelector(selectSelectedTodo);
   const users = useSelector(selectUsers);
-  const loading = useSelector(selectLoading);
 
   useEffect(() => {
     if (id) {
       dispatch(fetchTodoById(id));
     }
   }, [dispatch, id]);
-
-  if (loading) return <p>Loading...</p>;
 
   if (!todo) return <p>Todo not found</p>;
 
