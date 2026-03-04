@@ -1,0 +1,30 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.wrapper {
+  padding: v.$spacing-lg;
+}
+
+.back {
+  @include m.button-base;
+  background: transparent;
+  border: 1px solid v.$border;
+  margin-bottom: v.$spacing-md;
+
+  &:hover {
+    background: v.$bg;
+  }
+}
+
+.card {
+  @include m.card;
+  animation: fadeIn 0.2s ease;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: v.$spacing-sm 0;
+  }
+}
