@@ -38,7 +38,14 @@ const TodoDetailsPage = () => {
           <h2>{todo.title}</h2>
 
           <p>
-            <strong>Status:</strong> {todo.completed ? "Completed" : "Active"}
+            <strong>Status:</strong>{" "}
+            <span
+              className={
+                todo.completed ? styles.completedBadge : styles.activeBadge
+              }
+            >
+              {todo.completed ? "Completed" : "Active"}
+            </span>
           </p>
 
           <p>

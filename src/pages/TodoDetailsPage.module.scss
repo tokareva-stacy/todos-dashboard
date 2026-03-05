@@ -31,3 +31,17 @@
     margin: v.$spacing-sm 0;
   }
 }
+
+.completedBadge {
+  color: v.$completed;
+  padding: 4px 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.activeBadge {
+  color: v.$active;
+  padding: 4px 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
