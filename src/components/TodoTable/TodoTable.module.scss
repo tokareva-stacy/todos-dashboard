@@ -1,5 +1,4 @@
 @use '../../styles/variables' as v;
-@use '../../styles/mixins' as m;
 
 .wrapper {
   background: v.$white;
@@ -16,12 +15,15 @@
     padding: 10px;
     border-bottom: 1px solid v.$border;
     text-align: left;
+    transition: v.$transition;
   }
 
   th {
     background: v.$bg;
     font-weight: 600;
-     border-radius: v.$radius-sm;
+  }
+  tr {
+    transition: v.$transition;
   }
 }
 
@@ -47,4 +49,8 @@
   &:hover {
     opacity: 0.9;
   }
+}
+
+tbody tr:hover {
+  background: v.$bg;
 }

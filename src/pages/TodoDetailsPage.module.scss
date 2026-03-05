@@ -2,17 +2,20 @@
 @use '../styles/mixins' as m;
 
 .wrapper {
-  padding: v.$spacing-lg;
+  padding-top: 24px;
 }
 
 .back {
   @include m.button-base;
   background: transparent;
-  border: 1px solid v.$border;
+  border: 2px solid v.$primary;
   margin-bottom: v.$spacing-md;
+  color: v.$primary;
 
   &:hover {
     background: v.$bg;
+    border-color: v.$primary-hover;
+    color: v.$primary-hover;
   }
 }
 

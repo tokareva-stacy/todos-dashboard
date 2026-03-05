@@ -1,9 +1,11 @@
 @use './reset';
 @use './variables' as v;
+@use './layout';
+
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, sans-serif;
-  background: v.$bg;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: v.$white;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(147, 204, 170, 0.57) 52%, rgba(121, 199, 180, 0.81) 100%);
+
 }

@@ -26,8 +26,8 @@ const TodosPage = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Todos</h1>
+    <div className="container">
+      <h1>Todos Dashboard</h1>
 
       <Filters />
 

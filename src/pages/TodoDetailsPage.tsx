@@ -28,25 +28,27 @@ const TodoDetailsPage = () => {
   const user = users.find((u) => u.id === todo.userId);
 
   return (
-    <div className={styles.wrapper}>
-      <button onClick={() => navigate("/todos")} className={styles.back}>
-        ← Back
-      </button>
+    <div className="container">
+      <div className={styles.wrapper}>
+        <button onClick={() => navigate("/todos")} className={styles.back}>
+          ←
+        </button>
 
-      <div className={styles.card}>
-        <h2>{todo.title}</h2>
+        <div className={styles.card}>
+          <h2>{todo.title}</h2>
 
-        <p>
-          <strong>Status:</strong> {todo.completed ? "Completed" : "Active"}
-        </p>
+          <p>
+            <strong>Status:</strong> {todo.completed ? "Completed" : "Active"}
+          </p>
 
-        <p>
-          <strong>User ID:</strong> {todo.userId}
-        </p>
+          <p>
+            <strong>User ID:</strong> {todo.userId}
+          </p>
 
-        <p>
-          <strong>User Name:</strong> {user ? user.name : "Unknown"}
-        </p>
+          <p>
+            <strong>User Name:</strong> {user ? user.name : "Unknown"}
+          </p>
+        </div>
       </div>
     </div>
   );
